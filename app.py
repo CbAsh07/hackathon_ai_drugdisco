@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # Page configuration
 # ---------------------------
 st.set_page_config(
-    page_title="AI$Disco: AI-Powered BGC Discovery",
+    page_title="AI4Disco: AI-Powered BGC Discovery",
     page_icon="🧬",
     layout="wide"
 )
