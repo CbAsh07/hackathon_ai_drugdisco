@@ -21,20 +21,39 @@ st.set_page_config(
 )
 
 # ---------------------------
+# Custom CSS for font sizes
+# ---------------------------
+st.markdown("""
+    <style>
+    .big-font {
+        font-size:28px !important;
+        font-weight: bold;
+    }
+    .medium-font {
+        font-size:22px !important;
+    }
+    .small-font {
+        font-size:18px !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# ---------------------------
 # Landing / Hero Section
 # ---------------------------
-st.title("🧬 AI-Powered BGC Discovery Platform")
+st.markdown('<p class="big-font">🧬 AI-Powered BGC Discovery Platform</p>', unsafe_allow_html=True)
+
 st.markdown("""
-**Problem:** The world is running out of effective antibiotics and anticancer drugs.  
-**Solution:** Our platform uses AI to scan microbial genomes, detect biosynthetic gene clusters (BGCs), and prioritize top candidates for new drugs.
-""")
+<p class="medium-font"><b>Problem:</b> The world is running out of effective antibiotics and anticancer drugs.</p>
+<p class="medium-font"><b>Solution:</b> Our platform uses AI to scan microbial genomes, detect biosynthetic gene clusters (BGCs), and prioritize top candidates for new drugs.</p>
+""", unsafe_allow_html=True)
 
 st.markdown("---")
 
 # ---------------------------
 # Mock Genome Upload Section
 # ---------------------------
-st.header("Upload Genome (Demo)")
+st.markdown('<p class="big-font">Upload Genome (Demo)</p>', unsafe_allow_html=True)
 uploaded_file = st.file_uploader("Upload microbial genome (FASTA/GenBank)", type=["fasta", "gbk"])
 
 if uploaded_file:
@@ -44,7 +63,7 @@ if uploaded_file:
 # ---------------------------
 # Mock BGC Results
 # ---------------------------
-st.header("Detected Biosynthetic Gene Clusters (BGCs)")
+st.markdown('<p class="big-font">Detected Biosynthetic Gene Clusters (BGCs)</p>', unsafe_allow_html=True)
 
 clusters = pd.DataFrame([
     {"Cluster ID": "Cluster 1", "Type": "NRPS", "Novelty": 0.85, "Drug-likeness": 0.76},
@@ -58,17 +77,18 @@ st.dataframe(clusters)
 # ---------------------------
 # Novelty vs Drug-likeness Chart
 # ---------------------------
-st.header("Novelty vs Drug-likeness")
+st.markdown('<p class="big-font">Novelty vs Drug-likeness</p>', unsafe_allow_html=True)
 
 fig, ax = plt.subplots(figsize=(8,5))
 ax.scatter(clusters["Novelty"], clusters["Drug-likeness"], c="green", s=120)
 
 for i, row in clusters.iterrows():
-    ax.text(row["Novelty"] + 0.01, row["Drug-likeness"], row["Cluster ID"], fontsize=9)
+    ax.text(row["Novelty"] + 0.01, row["Drug-likeness"], row["Cluster ID"], fontsize=12)
 
-ax.set_xlabel("Novelty Score")
-ax.set_ylabel("Drug-likeness Score")
-ax.set_title("Cluster Prioritization")
+ax.set_xlabel("Novelty Score", fontsize=14)
+ax.set_ylabel("Drug-likeness Score", fontsize=14)
+ax.set_title("Cluster Prioritization", fontsize=16)
+ax.tick_params(axis="both", labelsize=12)
 ax.set_xlim(0,1)
 ax.set_ylim(0,1)
 st.pyplot(fig)
@@ -76,28 +96,28 @@ st.pyplot(fig)
 # ---------------------------
 # How It Works Section
 # ---------------------------
-st.header("How It Works")
+st.markdown('<p class="big-font">How It Works</p>', unsafe_allow_html=True)
 st.markdown("""
-1. **Genome Scanning:** Upload microbial genomes.  
-2. **BGC Detection:** AntiSMASH detects biosynthetic gene clusters.  
-3. **Clustering & Analysis:** BiG-SCAPE groups similar clusters and calculates novelty.  
-4. **AI Prioritization:** Machine learning ranks top candidates based on novelty and drug potential.  
-5. **Result Dashboard:** View top clusters, novelty score, and drug-likeness for each BGC.
-""")
+<p class="medium-font">1. <b>Genome Scanning:</b> Upload microbial genomes.</p>
+<p class="medium-font">2. <b>BGC Detection:</b> AntiSMASH detects biosynthetic gene clusters.</p>
+<p class="medium-font">3. <b>Clustering & Analysis:</b> BiG-SCAPE groups similar clusters and calculates novelty.</p>
+<p class="medium-font">4. <b>AI Prioritization:</b> Machine learning ranks top candidates based on novelty and drug potential.</p>
+<p class="medium-font">5. <b>Result Dashboard:</b> View top clusters, novelty score, and drug-likeness for each BGC.</p>
+""", unsafe_allow_html=True)
 
 # ---------------------------
 # Partnerships / Impact
 # ---------------------------
-st.header("🌍 Partnerships & Impact")
+st.markdown('<p class="big-font">🌍 Partnerships & Impact</p>', unsafe_allow_html=True)
 st.markdown("""
-- Collaborate with **pharma, biotech startups, and government research institutes**  
-- Accelerate **drug discovery from natural products**  
-- Reduce **R&D costs and failure rates**  
-- Focus research on **high-priority, novel biosynthetic clusters**
-""")
+<p class="medium-font">- Collaborate with <b>pharma, biotech startups, and government research institutes</b></p>
+<p class="medium-font">- Accelerate <b>drug discovery from natural products</b></p>
+<p class="medium-font">- Reduce <b>R&D costs and failure rates</b></p>
+<p class="medium-font">- Focus research on <b>high-priority, novel biosynthetic clusters</b></p>
+""", unsafe_allow_html=True)
 
 # ---------------------------
 # Footer / Call to Action
 # ---------------------------
 st.markdown("---")
-st.markdown("💡 *This is a demo prototype for the Smart India Hackathon. In the full version, antiSMASH and BiG-SCAPE run in the backend, and AI ranks clusters in real-time.*")
+st.markdown('<p class="small-font">💡 <i>This is a demo prototype for the Smart India Hackathon. In the full version, antiSMASH and BiG-SCAPE run in the backend, and AI ranks clusters in real-time.</i></p>', unsafe_allow_html=True)
