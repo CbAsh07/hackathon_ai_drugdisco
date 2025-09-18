@@ -86,17 +86,6 @@ st.markdown("""
 """)
 
 # ---------------------------
-# Partnerships / Impact
-# ---------------------------
-st.header("🌍 Partnerships & Impact")
-st.markdown("""
-- Collaborate with **pharma, biotech startups, and government research institutes**  
-- Accelerate **drug discovery from natural products**  
-- Reduce **R&D costs and failure rates**  
-- Focus research on **high-priority, novel biosynthetic clusters**
-""")
-
-# ---------------------------
 # Footer / Call to Action
 # ---------------------------
 st.markdown("---")
