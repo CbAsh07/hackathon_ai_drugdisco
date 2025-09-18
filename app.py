@@ -15,7 +15,7 @@ st.set_page_config(
 # ---------------------------
 # Landing / Hero Section
 # ---------------------------
-st.title("🧬 AI-Powered BGC Discovery Platform")
+st.title("🧬 AI4Disco: AI-Powered BGC Discovery Platform")
 st.markdown("""
 **Problem:** The world is running out of effective antibiotics and anticancer drugs.  
 **Solution:** Our platform uses AI to scan microbial genomes, detect biosynthetic gene clusters (BGCs), and prioritize top candidates for new drugs.
