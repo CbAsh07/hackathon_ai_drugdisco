@@ -18,7 +18,8 @@ st.set_page_config(
 st.title("🧬 AI4Disco: AI-Powered BGC Discovery Platform")
 st.markdown("""
 **Problem:** Traditional drug discovery methods are slow, costly, and yield very few successful candidates. Despite India’s rich microbial biodiversity, 
-there is no efficient system to mine microbial genomes and identify promising biosynthetic gene clusters (BGCs) that could lead to breakthrough medicines. 
+there is no efficient system to mine microbial genomes and identify promising biosynthetic gene clusters (BGCs) that could lead to breakthrough medicines.  
+
 **Solution:** Our platform uses AI to scan microbial genomes, detect biosynthetic gene clusters (BGCs), and prioritize top candidates for new drugs.
 """)
 
