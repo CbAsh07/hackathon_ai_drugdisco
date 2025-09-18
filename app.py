@@ -60,7 +60,7 @@ st.dataframe(clusters)
 # ---------------------------
 st.header("Novelty vs Drug-likeness")
 
-fig, ax = plt.subplots(figsize=(8,5))
+fig, ax = plt.subplots(figsize=(6,4))
 ax.scatter(clusters["Novelty"], clusters["Drug-likeness"], c="green", s=120)
 
 for i, row in clusters.iterrows():
