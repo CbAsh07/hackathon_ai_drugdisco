@@ -25,7 +25,7 @@ there is no efficient system to mine microbial genomes and identify promising bi
 
 <h3 style='font-size:20px; color:green;'>Solution:</h3>
 <p style='font-size:18px;'>
-Our platform uses AI to scan microbial genomes, detect biosynthetic gene clusters (BGCs), and prioritize top candidates for new drugs.
+Our platform will scan microbial genomes, detect biosynthetic gene clusters (BGCs), and use AI to prioritize top candidates for new drugs in a faster, efficient way.
 </p>
 """, unsafe_allow_html=True)
 
