@@ -17,7 +17,7 @@ st.set_page_config(
 # ---------------------------
 st.title("🧬 AI4Disco: AI-Powered BGC Discovery Platform")
 st.markdown("""
-**Problem:** The world is running out of effective antibiotics and anticancer drugs.  
+**Problem:** Traditional drug discovery methods are slow, costly, and yield very few successful candidates. Despite India’s rich microbial biodiversity, there is no efficient system to mine microbial genomes and identify promising biosynthetic gene clusters (BGCs) that could lead to breakthrough medicines. 
 **Solution:** Our platform uses AI to scan microbial genomes, detect biosynthetic gene clusters (BGCs), and prioritize top candidates for new drugs.
 """)
 
@@ -39,10 +39,10 @@ if uploaded_file:
 st.header("Detected Biosynthetic Gene Clusters (BGCs)")
 
 clusters = pd.DataFrame([
-    {"Cluster ID": "Cluster 1", "Type": "NRPS", "Novelty": 0.85, "Drug-likeness": 0.76},
-    {"Cluster ID": "Cluster 2", "Type": "PKS", "Novelty": 0.92, "Drug-likeness": 0.89},
-    {"Cluster ID": "Cluster 3", "Type": "RiPP", "Novelty": 0.40, "Drug-likeness": 0.55},
-    {"Cluster ID": "Cluster 4", "Type": "Terpene", "Novelty": 0.70, "Drug-likeness": 0.65},
+    {"Cluster ID": "Cluster 1", "Type": "PKS", "Novelty": 0.92, "Drug-likeness": 0.89},
+    {"Cluster ID": "Cluster 2", "Type": "NRPS", "Novelty": 0.85, "Drug-likeness": 0.76},
+    {"Cluster ID": "Cluster 3", "Type": "Terpene", "Novelty": 0.70, "Drug-likeness": 0.65},
+    {"Cluster ID": "Cluster 4", "Type": "RiPP", "Novelty": 0.40, "Drug-likeness": 0.55},
 ])
 
 st.dataframe(clusters)
